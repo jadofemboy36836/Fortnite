@@ -1,4 +1,4 @@
-if not _G.thingtosay then _G.thingtosay = "jado cool man | .gg/klardok" end
+if not _G.thingtosay then _G.thingtosay = "cookie" end
 if not _G.shoption then _G.shoption = "largest" end
 wait(5) if not game:IsLoaded() then game.Loaded:Wait() end
 
@@ -55,7 +55,7 @@ coroutine.resume(coroutine.create(function()
                         spawn(function() pcall(function()
                         lp.Character:FindFirstChild("HumanoidRootPart").CFrame = z.Character:FindFirstChild("HumanoidRootPart").CFrame; wait(0.5); lp.Character:FindFirstChild("HumanoidRootPart").CFrame = z.Character:FindFirstChild("HumanoidRootPart").CFrame
                         end) end)
-                        wait(0.5)
+                        wait(1.5)
                     end
                 end
             end
@@ -63,11 +63,11 @@ coroutine.resume(coroutine.create(function()
     end
 end))
 coroutine.resume(coroutine.create(function()
-    while wait(0.4) do
+    while wait(3.8) do
         for _,z in next, game.Players:GetPlayers() do
             if z~=lp then
                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w " .. z.Name .. " " .. _G.thingtosay,"All")
-                wait(1.4)
+                wait(3.8)
             end
         end
     end
