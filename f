@@ -53,9 +53,9 @@ coroutine.resume(coroutine.create(function()
                 if z ~= lp then
                     if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") and z and z.Character and z.Character:FindFirstChildOfClass("Humanoid").Sit == false and z.Character:FindFirstChildOfClass("Humanoid").FloorMaterial ~= Enum.Material.Air then
                         spawn(function() pcall(function()
-                        lp.Character:FindFirstChild("HumanoidRootPart").CFrame = z.Character:FindFirstChild("HumanoidRootPart").CFrame; wait(0.5); lp.Character:FindFirstChild("HumanoidRootPart").CFrame = z.Character:FindFirstChild("HumanoidRootPart").CFrame
+                        lp.Character:FindFirstChild("HumanoidRootPart").CFrame = z.Character:FindFirstChild("HumanoidRootPart").CFrame; wait(0.1); lp.Character:FindFirstChild("HumanoidRootPart").CFrame = z.Character:FindFirstChild("HumanoidRootPart").CFrame
                         end) end)
-                        wait(1.5)
+                        wait(1.1)
                     end
                 end
             end
@@ -63,7 +63,7 @@ coroutine.resume(coroutine.create(function()
     end
 end))
 coroutine.resume(coroutine.create(function()
-    while wait(3.8) do
+    while wait(2.8) do
         for _,z in next, game.Players:GetPlayers() do
             if z~=lp then
                 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w " .. z.Name .. " " .. _G.thingtosay,"All")
