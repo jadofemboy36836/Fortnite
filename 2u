@@ -72,7 +72,7 @@ coroutine.resume(coroutine.create(function()
         end
     end
 end))
-wait(45)
+wait(100)
 local GUIDs = {}
 local maxPlayers = 0
 local pagesToSearch = 100
