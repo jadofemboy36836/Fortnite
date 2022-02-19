@@ -6,8 +6,8 @@ local lp = game.Players.LocalPlayer
 repeat wait() until lp and lp.Character and lp.Character:FindFirstChild("HumanoidRootPart")
 local rservice = game:GetService("RunService")
 
-coroutine.resume(coroutine.create(function() while wait(0.4) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then for _,v in next, z.Backpack:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end) end end)) 
-coroutine.resume(coroutine.create(function() while wait(0.4) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then if z.Character and z.Character:FindFirstChildOfClass("Tool") then for _,v in next, z.Character:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end end) end end))
+coroutine.resume(coroutine.create(function() while wait(0.1) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then for _,v in next, z.Backpack:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end) end end)) 
+coroutine.resume(coroutine.create(function() while wait(0.1) do pcall(function() for _,z in next, game.Players:GetPlayers() do if z ~= lp then if z.Character and z.Character:FindFirstChildOfClass("Tool") then for _,v in next, z.Character:GetDescendants() do if v:IsA'Sound' then v.TimePosition = nil end end end end end end) end end))
 
 for _, z in next, game:GetDescendants() do if z:IsA "Seat" then z.Disabled = true end end
 
@@ -47,7 +47,7 @@ rservice.Stepped:Connect(function()
     end
 end)
 coroutine.resume(coroutine.create(function()
-    while wait(0.3) do
+    while wait(0.1) do
         pcall(function()
             for _,z in pairs(game.Players:GetPlayers()) do
                 if z ~= lp then
